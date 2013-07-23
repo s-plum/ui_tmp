@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>TMP UI Super Friends | {% block title %}{% endblock %}</title>
+	{{ "global.min.css" | asset_url | stylesheet_tag }}
+	{% block styles %}{% endblock %}
+</head>
+<body>
+	{{ "plumrnizr.min.js" | asset_url | script_tag }}
+	<header>
+		<a href="/" id="logo">UI Super Friends</a>
+		<a href="#content" id="skip-nav">Skip Navigation</a>
+		<h1><span><b>Hall of</b> Web Standards</span></h1>
+		{% include "navigation" %}
+	</header>
+	<main id="content">
+		<article>
+			{% block article %}{% endblock %}
+		</article>
+		<aside>
+			{% block aside %}{% endblock %}
+		</aside>
+	</main>
+	{% block scripts %}{% endblock %}
+	{{ "global.min.js" | asset_url | script_tag }}
+</body>
+</html>
