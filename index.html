@@ -6,25 +6,65 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>TMP UI Super Friends</title>
 	<link rel="stylesheet" href="css/global.css"/>
-	{% block styles %}{% endblock %}
-	<script src="js/plumrnizr.min.js">
+	<script src="js/plumrnizr.min.js"></script>
 </head>
 <body>
 	<header>
 		<a href="/" id="logo">UI Super Friends</a>
 		<a href="#content" id="skip-nav">Skip Navigation</a>
 		<h1><span><b>Hall of</b> Web Standards</span></h1>
-		{% include "navigation" %}
+		<nav role="navigation">
+			<ul>
+				<li><a href="/index.html">Headquarters</a></li>
+				<li><a href="/fortress.html">Fortress of RWD</a></li>
+				<li><a href="/codecave.html">The Codecave</a></li>
+			</ul>
+		</nav>
 	</header>
 	<main id="content">
 		<article>
-			{% block article %}{% endblock %}
+			<section>
+				<h2>Meanwhile, in the Hall of Web Standards...</h2>
+				<h3>What's with the blue beanies?</h3>
+				<img src="img/lou-beanies-2012.jpg" alt="LOU dev team wearing blue beanies">
+				<p>November 30 is Blue Beanie Day - an international celebration of web standards observed by UI developers everywhere (including members of our Louisville dev team, pictured above). Learn more about the event on <a href="http://bluebeanieday.tumblr.com/">Tumblr</a>, then check out photos of other developers in their blue beanies on <a href="http://www.flickr.com/groups/bbd13/">Flickr</a>.</p>
+			</section>
+			<section>
+				<h2>Introducing the UI Super Friends</h2>
+				<p>Team photos go here</p>
+			</section>
+			<section>
+				<h2>Origin</h2>
+				<p>In the early days of web development, the user interface was simply a means to an end. When someone wanted information on the Internet, they told the developer how they wanted it to look, and the developer returned just that. It was the age of the code monkey, a primordial beast with infinite capacity for drinking Mountain Dew and limited (if any) input on the tasks set before it.</p>
+				<p>As the web grew, it became a browser war zone. Users were stuck in a crossfire of cross-browser incompatibilities, bombarded by confusing interfaces, and living in constant fear of becoming trapped on a never-ending flash landing page. The world of the web seemed doomed... who would step up to write the many wrongs that lurked in the code?</p>
+				<p>The sobs of frustration of users everywhere eventually echoed into the deep bowels of the Internet, where the code monkeys toiled day-in and day-out. Upon hearing those cries, the code monkeys knew that they must take action to protect the users' best interests. With their knowledge of accessibility, optimization, and web standards, they could save users from the evil code slowly infecting the web.</p>
+				<p>It was on that day that the code monkeys evolved into User Interface Developers. Protected from naysayers by their <a href="http://bluebeanieday.tumblr.com/">blue beanies</a>, the UI team rose to the surface of web development to ensure that every step of the web development process upheld the highest of web standards. Working alongside designers, copywriters, project managers, upper management, and even clients, the developers would not rest until the web was once again a safe place for users to get information.</p>
+				<p>As User Interface development became a more and more crucial component of web projects, the UI developers found themselves receiving a great deal more attention than they had back in their code monkey days. Seizing the opportunity to gain greater recognition in the web world and possibly wear capes, they renamed themselves the UI Super Friends. With their new not-so-secret identity in place, the UI Super Friends went forth to fight for the good of the user above all else.</p>
+				<p>Today, they find themselves engaged in battles of epic proportions, struggling to bring order to the massive, untamed beast that is the mobile web. The future of web technology may be uncertain, but the UI Super Friends will not rest until the user prevails.</p>
+			</section>
 		</article>
 		<aside>
-			{% block aside %}{% endblock %}
+			<section>
+				<h3>UI Super Friends Hotline</h3>
+				<p>Contact info goes here</p>
+			</section>
+			<section>
+				<h3>The Oath of Standards</h3>
+				<p><em>as of 24 November 2013 - see <a href="http://www.tmp.com/web-standards/">tmp.com</a> for full documentation</em></p>
+				<p>The members of the TMP UI Super Friends pledge to support:</p>
+				<h4>Code and accessibility standards</h4>
+				<ul class="bulleted">
+					<li><a href="http://www.w3c.org/">World Wide Web Consortium (W3C) best practices</a></li>
+					<li><a href="http://www.tmp.com/web-standards/docs/wcag-2-level-a-overview.pdf">WCAG 2.0 Level A success criteria</a></li>
+				</ul>
+				<h4>Operating systems</h4>
+				<h4>Browsers</h4>
+				<ul>
+				</ul>
+				<p>The Super Friends will also offer <a href="http://www.tmp.com/web-standards/#limited-support">limited support</a> to Internet Explorer 8 for candidate-facing websites.</p>
+			</section>
 		</aside>
 	</main>
-	{% block scripts %}{% endblock %}
-	{{ "global.min.js" | asset_url | script_tag }}
+	<script src="js/global.js"></script>
 </body>
 </html>
