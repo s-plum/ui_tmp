@@ -22,11 +22,7 @@
     "followLeader": true,
     "routes": null,
     "customRubyPath": null,
-<<<<<<< HEAD
     "remoteDebugPort": 8081,
-=======
-    "remoteDebugPort": 0,
->>>>>>> c05d64b95682cd04631d9c0e98dd61fed87afae1
     "useNodeSass": false,
     "optimiseImages": true,
     "password": null
