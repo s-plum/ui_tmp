@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div>
+	<div class="graphics">
+    	<p>ridiculously<br>
+innovative<br>
+for 136 years.</p>
+        <a class="name"><!--Samantha<span>Retail Assistan Manager</span>--></a>
+        <div class="picture">
+        	<img src="three-shapes.png" />
+        </div>
+        <img id="arrows" src="two-arrows.png" />
+    </div><!--	graphics	-->
+    
+    <div class="right-side">
+    
+	    <div class="testi active" id="fca-home">
+    		<h2>And the place for an incredible career</h2>
+        	<p>At AT&amp;T, we have a history of making history. Along the way, we’ve created some pretty amazing careers for all kinds of people with all kinds of skills. Do you want a job, or do you want to make history? We thought so. <strong> Explore the possibilities through the icons below</strong></p>
+	        <a href="#">Learn More</a>
+    	</div>
+
+	    <div class="testi" id="fca-retail">
+    		<h2>Retail</h2>
+        	<p>"AT&amp;T has provided me the tools to be successful, no matter which career path I choose. I enjoy helping our customers, and there are many options for growth and advancement."<a href="/career-area/retail" class="lnk-learn-more">Learn More</a></p>
+	        <a href="#">Learn More</a>
+    	</div>
+
+	    <div class="testi" id="fca-it">
+    		<h2>IT/Engineering/Technology</h2>
+        	<p>"I tell my friends how I am constantly learning new skills. Professionally, I can see myself adding to my skill sets in many ways I never thought possible."<a href="/career-area//it-engineering" class="lnk-learn-more">Learn More</a></p>
+    	    <a href="#">Learn More</a>
+	    </div>
+
+	    <div class="testi" id="fca-callcenter">
+    		<h2>Call Center</h2>
+        	<p>"AT&amp;T is investing in my education, which allows me to stay up-to-date on technology, and utilize this knowledge to enhance my ability to 'Rethink Possible.'"<a href="/career-area/call-center" class="lnk-learn-more">Learn More</a></p>
+	        <a href="#">Learn More</a>
+    	</div>
+
+	    <div class="testi" id="fca-college">
+    		<h2>College</h2>
+        	<p>"I believe that my time with AT&amp;T will allow me to be best equipped for the next step and ready for a new set of challenges."<a href="/career-area/college" class="lnk-learn-more">Learn More</a></p>
+	        <a href="#">Learn More</a>
+    	</div>
+
+	    <div class="testi" id="fca-tech">
+    		<h2>Technitian</h2>
+        	<p>"I enjoy the freedom of being in my truck, and not confined to a desk. The best part of my job is meeting new people and being presented with a different challenge every day."<a href="/career-area/technician" class="lnk-learn-more">Learn More</a></p>
+	        <a href="#">Learn More</a>
+    	</div>
+
+	    <div class="testi" id="fca-business">
+    		<h2>Business Sales Solutions</h2>
+        	<p>"As a leader in the industry, AT&amp;T affords me the opportunity to work with state-of-the-art products and services that our customers need to improve their business."<a href="/career-area/business-solutions" class="lnk-learn-more">Learn More</a></p>
+	        <a href="#">Learn More</a>
+    	</div>
+
+	    <div class="testi" id="fca-consumer">
+    		<h2>Consumer Sales</h2>
+        	<p>"The best part of my job is the opportunity to work and partner with customers every day. And through coaching and training programs, AT&amp;T continues to help me grow my career."<a href="/career-area/consumer-sales" class="lnk-learn-more">Learn More</a></p>
+	        <a href="#">Learn More</a>
+    	</div>
+
+	    <div class="testi" id="fca-mkt">
+    		<h2>Marketing/PR</h2>
+	        <p>"I love being involved in what I do because I feel that what we do really matters to our company and our society, and that’s gratifying."<a href="/career-area/marketing-pr" class="lnk-learn-more">Learn More</a></p>
+        	<a href="#">Learn More</a>
+    	</div>
+
+	    <div class="testi" id="fca-corp">
+	    	<h2>Corporate</h2>
+    	    <p>"The best part of my job is knowing that I make a difference in my organization and in the company as a whole."<a href="/career-area/corporate" class="lnk-learn-more">Learn More</a></p>
+        	<a href="#">Learn More</a>
+    	</div>
+
+	    <ul id="nav">
+    		<li id="ca-retail-big"><a href="#fca-retail">Retail</a></li>
+            <li id="ca-it-big"><a href="#fca-it">IT/Engineering</a></li>
+            <li id="ca-callcenter-big"><a href="#fca-callcenter">Call Center</a></li>
+            <li id="ca-college-big"><a href="#fca-college">College</a></li>
+            <li id="ca-tech-big"><a href="#fca-tech">Technician</a></li>
+            <li id="ca-business-big"><a href="#fca-business">Business Sales</a></li>
+            <li id="ca-consumer-big"><a href="#fca-consumer">Consumer Sales</a></li>
+            <li id="ca-mkt-big"><a href="#fca-mkt">Marketing/PR</a></li>
+            <li id="ca-corp-big"><a href="#fca-corp">Corporate</a></li>
+	    </ul>
+    </div>
+</div>
+
+<script src="js/gsap/TweenMax.js"></script>
+<script src="js/gsap/plugins/TextPlugin.js"></script>
+<script src="js/gsap/plugins/AttrPlugin.js"></script>
+<script src="js/jquery/jquery-1.10.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	
+	var $orangeOval = $(".graphics p"),
+		$greenBox = $(".name"),
+		$picture = $(".picture"),
+		$arrows = $("#arrows"),
+		text1 = "Samantha",
+		tOnLoad = new TimelineMax(),
+		animation = new TimelineMax({delay:2});
+		
+		tOnLoad.from($orangeOval, 1.5, {opacity:0, scale:0, ease:Elastic.easeOut.config(.5, .3)}, .1)
+			   .from($picture, 1.3, {opacity:0, scale:0, ease:Power2.easeOut}, .5)
+			   .from($greenBox, .8, {opacity:0, scale:.5, ease:Back.easeOut}, 1)
+			   .set($arrows, {left:180}, 0)
+			   .add("arrowsComing", "-=1")
+			   .from($arrows, .5, {left:-120, ease:Power3.easeOut}, "arrowsComing")
+			   .from($arrows, .3, {skewX:40, delay:0.2, ease:Back.easeOut}, "arrowsComing")
+			   .to($greenBox, 2, {text:text1})
+		//	   .set($arrows, {src:"./arrow.png"})
+		
+		console.log($orangeOval);
+		console.log($greenBox);
+		console.log($picture);
+		
+		
+	function singleTween(id, navId) {
+		var tl = new TimelineMax();
+		
+		var $newText = $(id),
+			$oldText;
+
+		
+		//$(navId).addClass("active");
+
+		$(".right-side").find(".testi").each(function() {
+            if ($(this).hasClass("active")) {
+				console.log("aaa" + $(this));
+				$oldText = $(this);
+			}
+			$(this).removeClass("active");
+        });
+		$newText.addClass("active");
+		console.log("old = " + $oldText.attr("id"));
+			
+		tl.to($oldText, 0.5, {opacity:0, scale:1.2, top:15})
+			.set($oldText, {display:"none"})
+			.set($newText, {display:"block", opacity:0, left:130})
+			.to($newText, 1, {opacity:1, left:0, onComplete:addActive, onCompleteParams:[navId, id]})
+			
+		return tl;
+	}
+	
+	function addActive(navId, newTextId) {
+		$("#nav").find("li").each(function(){
+			$(this).removeClass("active");
+		});
+		console.log("bb" + navId + " , " + newTextId);
+		 $(navId).addClass("active");
+		 $(newTextId).addClass("active");
+	}
+	
+	$("#nav li").mouseenter(function(){
+		if (!$(this).hasClass("active")) {
+		var id1 = $(this).find("a").attr("href"),
+			navId = "#" + $(this).attr("id");
+		//alert(id1);
+//		singleTween(id1, navId);
+		animation.play(id1);
+		
+		}
+	});
+	
+	$("#nav").find("li").each(function(index, element) {
+        var id1 = $(this).find("a").attr("href")
+			navId = "#" + $(this).attr("id");
+			console.log(navId);
+		animation.add(id1, "+=1.5")
+		animation.add(singleTween(id1, navId), id1);
+    });
+		
+	
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+{
+	"projects": [
+		{
+			"name": "IE Mode",
+			"image": "ie.jpg",
+			"description": "Alert users when they are browsing in IE7/IE Compatibility mode. Launch in IE7 to see it in action.",
+			"url": "//ui.tmp.com/projects/ie-mode/example.html"
+		},
+		{
+			"name": "Mediaelement",
+			"image": "mediaelement.jpg",
+			"description": "Cross-browser-friendly HTML5 video using mediaelement.js",
+			"url": "//ui.tmp.com/projects/mediaelement/"
+		},
+		{
+			"name": "Case Study: Nissan Global Careers",
+			"image": "case-study.jpg",
+			"description": "Real-world example of successful responsive design/development workflow",
+			"url": "//ui.tmp.com/projects/responsive-case-study/"
+		},
+		{
+			"name": "GreenSock Animation Platform",
+			"image": "greensock.jpg",
+			"description": "(PDF, 2.01MB) Powerful, jQuery-free, Javascript-based animation",
+			"url": "/public/docs/GSAP_presentation.pdf"
+		},
+		{
+			"name": "GSAP Demo",
+			"image": "greensock2.jpg",
+			"description": "Sample animation using GreenSock",
+			"url": "/public/docs/ATT_Example/demo2.html"
+		}
+	]
+}

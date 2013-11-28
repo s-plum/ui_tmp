@@ -1,0 +1,33 @@
+{% block title %}Hall of Standards{% endblock %}
+
+{% block article %}
+<section>
+	<h2>Super Friends! Respond!</h2>
+	<p>List of TMP RWD projects goes here.</p>
+	<p>Want to become a defender of truth, justice, and the responsive way? Check out:</p>
+	<ul class="link-list">
+		<li><a href="//ui.tmp.com/projects/rwd-school-of-rock/">RWD School of Rock!</a> Notes from our 3-week-long responsive web design boot camp training sessions</li>
+		<li><a href="//ui.tmp.com/projects/respond/">Respond: Responsive Design 101</a> High-level overview of responsive design concepts and basic do's/don'ts</li>
+	</ul>
+</section>
+{% endblock %}
+	
+{% block aside %}
+<section>
+	<h3>A League of Extraordinary Developers</h3>
+	<p>Our responsive brethen in the fight against bad code:</p>
+	<ul class="bulleted code">
+		<li><a href="http://bradfrostweb.com/"><b>Brad Frost</b></a> has a <a href="http://bradfrost.github.io/this-is-responsive/resources">massive collection of resources</a> for designers and developers alike.</li>
+		<li><a href="http://ethanmarcotte.com/"><b>Ethan Marcotte</b></a> wrote the book on RWD. <a href="http://www.abookapart.com/products/responsive-web-design">Literally</a>.</li>
+		<li><a href="http://meyerweb.com/"><b>Eric Meyer</b></a> is the master of the ultimate weapon: <a href="http://meyerweb.com/eric/css/">CSS</a>.</li>
+		<li><a href="http://www.lukew.com/"><b>Luke Wroblewski</b></a> was one of the first to start thinking <a href="http://www.lukew.com/resources/mobile_first.asp">mobile first</a></li>
+		<li><a href="http://www.zeldman.com/"><b>Jeffrey Zeldman</b></a>, web standards guru, is the reason for all of those <a href="http://bluebeanieday.tumblr.com/">blue beanies</a>.</li>
+		<li>The many authors of <a href="http://alistapart.com"><b>A List Apart</b></a> have compiled a sizable <a href="http://alistapart.com/topic/responsive-design">RWD archive</a>.</li>
+	</ul>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{{ "fortress.js" | asset_url | script_tag }}
+{% endblock %}

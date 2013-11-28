@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html lang="en" class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html lang="en" class="no-js ie9"><![endif]-->
+<!--[if lt IE 9 ]><html lang="en" class="no-js lt-ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
 <head>
 	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>TMP UI Super Friends | {% block title %}{% endblock %}</title>
 	{{ "global.min.css" | asset_url | stylesheet_tag }}
 	{% block styles %}{% endblock %}
+	{{ "plumrnizr.min.js" | asset_url | script_tag }}
 </head>
 <body>
-	{{ "plumrnizr.min.js" | asset_url | script_tag }}
 	<header>
 		<a href="/" id="logo">UI Super Friends</a>
-		<a href="#content" id="skip-nav">Skip Navigation</a>
+		<a href="#main-nav" id="skip-to-nav">Skip Navigation</a>
 		<h1><span><b>Hall of</b> Web Standards</span></h1>
-		{% include "navigation" %}
 	</header>
-	<main id="content">
+	<main id="content" class="{% block content-class %}{% endblock %}">
 		<article>
 			{% block article %}{% endblock %}
 		</article>
@@ -25,7 +23,7 @@
 			{% block aside %}{% endblock %}
 		</aside>
 	</main>
+	{% include "navigation" %}
 	{% block scripts %}{% endblock %}
-	{{ "global.min.js" | asset_url | script_tag }}
 </body>
 </html>

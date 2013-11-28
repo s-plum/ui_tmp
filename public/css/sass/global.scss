@@ -49,7 +49,7 @@ to {
 }
 
 $beanie: #59c3ef;
-$breakSix: 800px;
+$end_mobile: 800px;
 $breakNine: 900px;
 $experimental-support-for-svg: true;
 $ltgrey: #e7e7e7;
@@ -91,62 +91,77 @@ base structure and classes
 body {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkIxOTc2OTlGRUIyMzExRTJCOThGOTMzNThDM0IxODcxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkIxOTc2OUEwRUIyMzExRTJCOThGOTMzNThDM0IxODcxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QjE5NzY5OURFQjIzMTFFMkI5OEY5MzM1OEMzQjE4NzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QjE5NzY5OUVFQjIzMTFFMkI5OEY5MzM1OEMzQjE4NzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4DwSWJAAAAiklEQVR42qRSQQrAIAyzVfaNDfb/Jw22f+i6FrqbLQEDoaA2WhMqinM/mpaqJOWr7NdzW00hIoW9uXmzgZWbrlMBwH7zDBUVoGQPEohmfVGBHjQPRIDcBfKZ/xcNdUEQF5ZgAg05mOWEweYwJ4hVaU4Y/egoJ4hAmhNEIM0JgS5Mc2I20moYPgEGAEECMrKkk4ISAAAAAElFTkSuQmCC) repeat #FCFCFC;
   color: #000;
-  font: 300 .92em 'Ubuntu', Arial, Helvetica, sans-serif;
-  height: 100%;
-  left: 0;
+  font: 300 .92em/1.4em 'Ubuntu', Arial, Helvetica, sans-serif;
   margin: 0;
   overflow-x: hidden;
   padding: 0;
-  position: absolute;
-  @include transition(left 200ms linear);
-  width: 100%;
-  &.menu-open {
-	left: 95%;
-  }
 }
 
 main {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: auto;
-  max-width: 1500px;
+  max-width: 1200px;
   overflow: hidden;
-  padding: 20px;
+  padding: 20px 5px;
+  @include breakpoint($end_mobile) {
+	  padding: 20px;
+  }
 }
 
-article, aside section {
+article section, aside section {
   background: #fff;
   border: 4px solid #000;
   border-radius: 2px;
   box-shadow: 3px 3px 3px 0 rgba(0,0,0,.2);
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin-bottom: 1em;
   padding: 15px;
 }
 
 article {
 	float: left;
-	margin-bottom: 1em;
 	width: 100%;
-	@include breakpoint($breakSix) {
+	@include breakpoint($end_mobile) {
 		margin-right: 2%;
 		width: 63%;
+		.heroes & {
+			margin-right: 0;
+			width: 100%;
+		}
 	}	
 }
 
 aside {
 	float: right;
 	width: 100%;
-	@include breakpoint($breakSix) {
+	@include breakpoint($end_mobile) {
 		width: 35%;
+		.heroes & {
+			width: 100%;
+		}
 	}
-	
-	section {
+}
+section {
+	margin-bottom: 1em;
+	img {
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		border: 3px solid #000;
+		border-radius: 2px;
+		display: block;
+		height: auto;
 		margin-bottom: 1em;
+		width: 100%;
+		&.bunnycake {
+			margin: 0 auto 1em;
+			max-width: 400px;
+		}
 	}
 }
 
-h2, h3 {
+article h2, aside h3 {
 	background: #000;
 	color: #fff;
 	font-family: 'Permanent Marker', Arial, Helvetica, sans-serif;
@@ -166,10 +181,14 @@ h3 {
 	font-size: 1.4em;
 }
 h4 {
+	font-size: 1em;
 	margin: 0;
 }
 p {
 	margin: 0 0 1em;
+	&:last-child {
+		margin: 0;
+	}
 }
 a {
 	color: $red;
@@ -177,14 +196,37 @@ a {
 	&:hover, &:focus {
 		color: $beanie;
 	}
+	&.hotline {
+		display: block;
+		font-size: 2em;
+		line-height: 150%;
+		text-align: center;
+	}
+}
+
+iframe {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+.iframe-wrap {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 0;
+	padding-bottom: 60.625%;
+	position: relative;
+	width: 100%;
 }
 .bulleted {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 1em;
 	padding: 0;
+	&.code > li {
+		margin-bottom: 1em;
+	}
 	li {
 		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAFCAYAAABxeg0vAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjBFRkFFQzVGRUQ0RjExRTI4NTY5REM2RjUxNDg1NDE2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjBFRkFFQzYwRUQ0RjExRTI4NTY5REM2RjUxNDg1NDE2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MEVGQUVDNURFRDRGMTFFMjg1NjlEQzZGNTE0ODU0MTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MEVGQUVDNUVFRDRGMTFFMjg1NjlEQzZGNTE0ODU0MTYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5Oq1YUAAAA60lEQVR42mI8Oj9hRuOyh+rCAnx/GP78kXz36on23aefGVg42Z8z/Pt7U97Q/ZCni+PmV7Im582tZf+ycDDz/9m/e7/DbwZUwMzMLMnKyir56dceB45/X/zFvWV6GRhklzN8vLAkwpqP4T9QDRgzs7D9Z2Fl+wfjw7CQbsz/de//mLKwsLGvz45wDnWRd7c5euQ4//kL57UMbT25daS5rr97+1rs1eu3It//s/3685nzw7OLL9RYgJp/ysiIr/GtKt3gevHenwAvZ4a/f34zsHNwcMrKyoooKKqIK5l6MPk6mZ5aff4lA0CAAQB7/112LhhwAgAAAABJRU5ErkJggg==) no-repeat left .5em;
-		padding: 0 0 .75em 18px;
+		padding: 0 0 0 18px;
 		
 		ul {
 			list-style: none;
@@ -192,14 +234,18 @@ a {
 			li {
 				background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjAzOUQ4NTU1RUQ0RDExRTJBQjgzRTlGMzc0QUUxMzVFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjAzOUQ4NTU2RUQ0RDExRTJBQjgzRTlGMzc0QUUxMzVFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDM5RDg1NTNFRDREMTFFMkFCODNFOUYzNzRBRTEzNUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDM5RDg1NTRFRDREMTFFMkFCODNFOUYzNzRBRTEzNUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7ll9zSAAAAq0lEQVR42mLcu7As8exjbu2Hty+5HT5xUffr77+vpVUML/qllLZx6WvvZ6iLNDvPwMDwH4aZmJj+c/Py/9ezDro28fJrIyYDTc1rDFDAzMLC8O/fP4avnz8yXDq6TvPawctpLCrK0gt9XZ3FTly9K66kZcRload07uP796ICEor3dTQkt7KwMDPvWrlw3r7Opdv/7Nixk4GDg5ODU5JD0NzZ+4+Rk8ZrgAADAOhEQJrRNHotAAAAAElFTkSuQmCC) no-repeat left .5em;
 				margin-left: 5px;
-				padding: 0 0 .25em 15px;
+				padding: 0 0 0 15px;
 			}
 		}
+	}
+	span {
+		font-size: .92em;
 	}
 }
 
 .panel {
 	list-style: none;
+	overflow: hidden;
 	li {
 		background: #000;
 		border-radius: 2px;
@@ -208,7 +254,7 @@ a {
 		float: left;
 		margin-bottom: 2%;
 		width: 100%;
-		@include breakpoint(350px) {
+		@include breakpoint(450px) {
 			width: 49%;
 			&:nth-child(odd) {
 				clear: both;
@@ -218,7 +264,7 @@ a {
 		@include breakpoint(600px) {
 			margin-right: 2%;
 			width: 32%;
-			&:nth-child(4n+4) {
+			&:nth-child(3n+4) {
 				clear: both;
 			}
 			&:nth-child(odd) {
@@ -229,14 +275,14 @@ a {
 				margin-right: 0;
 			}
 		}
-		@include breakpoint($breakSix) {
+		@include breakpoint($end_mobile) {
 			margin-right: 0;
 			width: 49%;
 			&:nth-child(odd) {
 				clear: both;
 				margin-right: 2%;
 			}
-			&:nth-child(4n+4) {
+			&:nth-child(3n+4) {
 				clear: none;
 			}
 		}
@@ -249,7 +295,7 @@ a {
 			&:nth-child(odd) {
 				clear: none;
 			}
-			&:nth-child(4n+4) {
+			&:nth-child(3n+4) {
 				clear: both;
 			}
 		}
@@ -260,10 +306,12 @@ a {
 				margin-right: 1.5%;
 			}
 			&:nth-child(4n+4) {
-				clear: none;
 				margin-right: 0;
 			}
-			&:nth-child(5n+5) {
+			&:nth-child(3n+4) {
+				clear: none;
+			}
+			&:nth-child(4n+5) {
 				clear: both;
 			}
 		}
@@ -272,6 +320,7 @@ a {
 		display: block;
 		font-size: 1.2em;
 		font-weight: 700;
+		@include transition(color 100ms linear);
 	}
 	img {
 		background: #fff;
@@ -279,6 +328,7 @@ a {
 		border-radius: 2px;
 		@include box-sizing(border-box);
 		display: block;
+		margin: 0;
 		width: 100%;
 	}
 	span, p {
@@ -287,8 +337,11 @@ a {
 	}
 	p {
 		padding: 0 10px;
-		font-size: .83em;
-		line-height: 1.2em;
+		line-height: 1.25em;
+		margin-bottom: 10px;
+		@include breakpoint($end_mobile) {
+			font-size: .92em;
+		}
 	}
 }
 
@@ -297,6 +350,11 @@ header
 ================================================================= */
 header {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjU3OEQ1MTM5RUIyMzExRTI5ODg4QTUwRDkzM0YwMzI0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjU3OEQ1MTNBRUIyMzExRTI5ODg4QTUwRDkzM0YwMzI0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTc4RDUxMzdFQjIzMTFFMjk4ODhBNTBEOTMzRjAzMjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTc4RDUxMzhFQjIzMTFFMjk4ODhBNTBEOTMzRjAzMjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz70gXrJAAAAWklEQVR42mKc8uC/BAMDAx8Q/wbih9nyDP8YkAATVBIEWIGYnwENMEF1wsA3dAUsIGOhOr8Bjf+JroDx////KAJTHzKguImJAROguAmbAhQ3sWBRgOImgAADAPa9F317I7ziAAAAAElFTkSuQmCC) repeat $beanie;
+  overflow: hidden;
+  
+  @include breakpoint($end_mobile) {
+	margin-bottom: 2.5em;
+  }
   
   h1 span, #logo {
 	display: block;
@@ -323,7 +381,7 @@ header {
 	text-transform: uppercase;
 	z-index: 1;
 	
-	@include breakpoint($breakSix) {
+	@include breakpoint($end_mobile) {
 		border-width: 8px 0;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -337,7 +395,7 @@ header {
 	
 	b {
 	  font-weight: normal;
-	  @include breakpoint($breakSix) {
+	  @include breakpoint($end_mobile) {
 	    margin-right: 125px;
 	  }
 	}
@@ -357,7 +415,7 @@ header {
 		animation: spin 10s infinite linear;
 		-webkit-animation: spin 10s infinite linear;
 		
-		@include breakpoint($breakSix) {
+		@include breakpoint($end_mobile) {
 			margin-left: -243px;
 			z-index: 1;
 		}
@@ -371,14 +429,59 @@ header {
   text-align: center;
   text-indent: -9999%;
   z-index: 2;
-  @include breakpoint($breakSix) {
+  @include breakpoint($end_mobile) {
     background-position: 41% center;
   }
   @include breakpoint(900px) {
 	 background-position: 42% center;
   }
 }
-#skip-nav {
+#skip-to-nav {
+	background: $mdgrey;
+	border-color: #f2f2f2 #e9e9e9 #cccccc #d7d7d7;
+	border-radius: 2px;
+	border-style: solid;
+	border-width: 10px;
+	box-shadow: 1px 1px 3px 0 rgba(0,0,0,.2);
+	display: block;
+	height: 35px;
+	position: fixed;
+	right: 10px;
+	text-indent: -9999px;
+	top: 10px;
+	width: 35px;
+	z-index: 3;
+	@include breakpoint($end_mobile) {
+		@include wai;
+		border: 0;
+		height: 0;
+		width: 0;
+	}
+	&:before {
+	@include filter-gradient(#e00003, #7a0000, horizontal); // IE6-8 fallback on horizontal gradient
+	@include background-image(radial-gradient(center, ellipse cover,  rgba(224,0,3,1) 14%,rgba(122,0,0,1) 100%));
+	background-color: rgb(224,0,3);
+	border: 3px solid #cecece;
+	border-radius: 25px;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	content: '';
+	display: block;
+	height: 28px;
+	left: 50%;
+	margin: -14px 0 0 -14px;
+	position: absolute;
+	top: 50%;
+	width: 28px;
+	}
+	&:hover, &.active, &:focus {
+	&:before {
+		@include filter-gradient(#b4dded, #59c3ef, horizontal);
+		@include background-image(radial-gradient(center, ellipse cover,  rgba(180,221,237,1) 12%,rgba(89,195,239,1) 100%));
+		background-color: rgb(180,221,237);
+	}
+	}
   @include wai;
 }
 
@@ -397,7 +500,7 @@ header {
   top: 10px;
   width: 35px;
   z-index: 3;
-  @include breakpoint($breakSix) {
+  @include breakpoint($end_mobile) {
 	display: none;
   }
   &:before {
@@ -427,30 +530,35 @@ header {
   }
 }
 nav {
+	border-bottom: 4px solid #000;
+	border-top: 4px solid #000;
 	background: $red;
-	position: relative;
 	z-index: 2;
-	@include breakpoint($breakSix) {
+	@include breakpoint($end_mobile) {
 		background: $red;
-		border-bottom: 4px solid #000;
-		border-top: 4px solid #000;
+		position: absolute;
+		top: 8em;
+		width: 100%;
 	}
 	ul {
 		list-style: none;
 		margin: 0 auto;
 		max-width: 900px;
-		padding: 10px 0;
-		@include breakpoint($breakSix) {
-			padding: 0;
+		padding: 0;
+		@include breakpoint($end_mobile) {
 			text-align: center;
 		}
 	}
 	li {
-		@include breakpoint($breakSix) {
+		@include breakpoint($end_mobile) {
 			display: inline;
+		}
+		&:first-child a {
+			border-top: none;
 		}
 	}
 	a {
+		border-top: 2px solid #000;
 		color: $yellow;
 		text-shadow: none;
 		display: block;
@@ -461,44 +569,83 @@ nav {
 		&:hover, &:focus {
 			background: #000;
 			color: #fff;
-			@include breakpoint($breakSix) {
+			@include breakpoint($end_mobile) {
 				background: none;
 				color: #fff;
 			}
 		}
-		@include breakpoint($breakSix) {
-			color: $yellow;
+		li:first-child & {
+			border-top: none;
+		}
+		@include breakpoint($end_mobile) {
+			border: none;
 			display: inline-block;
 			@include transition(all 100ms linear);
 			text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000;
 		}
 	}
 }
-.js nav {
-	@include filter-gradient($red, #b40000, horizontal);
-	@include background-image(linear-gradient(left, $red 98%, $red 99%,#b40000 100%));
-	background-color: $red; // Old browsers
-	height: 100%;
-	left: -95%;
-	position: absolute;
-	top: 0;
-	width: 95%;
-	@include breakpoint($breakSix) {
-		background: $red;
+
+.link-list {
+	list-style: none;
+	li {
+		margin-bottom: 1em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	a {
 		display: block;
-		height: auto;
-		left: 0;
-		position: relative;
-		width: 100%;
+		font-size: 1.25em;
+		font-weight: bold;
 	}
 }
 
 /* =================================================================
-random test crap
+animations
 ================================================================= */
-.js a.twitter-timeline {
-	display: none;
+@keyframes batman
+{
+	from {
+		width: 0;
+		height: 0;
+		margin-left: 0;
+		margin-top: 0;
+	}
+	to {
+		width: 800px;
+		height: 800px;
+		margin-left: -400px;
+		margin-top: -400px;
+	}
 }
-.twitter-timeline {
-	width: 100%;
+
+@-webkit-keyframes batman /* Safari and Chrome */
+{
+	from {
+		width: 0;
+		height: 0;
+		margin-left: 0;
+		margin-top: 0;
+	}
+	to {
+		width: 800px;
+		height: 800px;
+		margin-left: -400px;
+		margin-top: -400px;
+	}
+}
+#html5 {
+	width: 0;
+	height: 0;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 9999;
+}
+
+.batmobile {
+	animation: batman 500ms linear 2 alternate;
+	-webkit-animation: batman 500ms linear 2 alternate;
 }

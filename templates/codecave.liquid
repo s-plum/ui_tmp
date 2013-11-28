@@ -1,45 +1,54 @@
 {% block title %}The Codecave{% endblock %}
 
 {% block article %}
-	<h2>Projects</h2>
-	<ul class="panel">
-		<li><a href="#"><img src="" alt="" width="200" height="200"/><span>IE Mode</span></a><p>Script to alert users when they are browsing a site in IE7/IE Compatibility mode. Launch in IE7 to view alert message.</p></li>
-		<li><a href="#"><img src="" alt="" width="200" height="200"/><span>Mediaelement</span></a><p>Guide to implementing cross-browser-friendly HTML5 video using mediaelement.js</p></li>
-		<li><a href="#"><img src="" alt="" width="200" height="200"/><span>Respond</span></a><p>Responsive site on the basics of responsive design</p></li>
-		<li><a href="#"><img src="" alt="" width="200" height="200"/></a></li>
-		<li><a href="#"><img src="" alt="" width="200" height="200"/></a></li>
-	</ul>
+	<section>
+		<h2>Projects</h2>
+		<ul class="panel">
+			{% for project in model.projects %}
+			<li><a href="{{ project.url }}"><img src="/public/img/codecave/{{ project.image }}" alt="{{ project.name }}"/><span>{{ project.name }}</span></a><p>{{ project.description }}</p></li>
+			{% endfor %}
+		</ul>
+	</section>
 {% endblock %}
 
 {% block aside %}
 	<section>
 		<h3>Code Library</h3>
 		<p>Download resource files, or link to them directly:</p>
-		<ul class="bulleted">
-			<li><h4>Flexslider (with IE10 bug fix)</h4> - <a href="lib/culture-gallery/js/jquery.flexslider.js">full</a> | <a href="lib/culture-gallery/js/jquery.flexslider-min.js">min</a></li>
-			<li><strong>Image/video gallery</strong>
+		<ul class="bulleted code">
+			<li><a href="//seostatic.tmp.com/js/plugins/jquery.flexslider-min.js"><strong>Flexslider</strong> <span>(with IE10 bug fix)</span></a></li>
+			<li><strong>Image/video carousel gallery</strong>
 				<ul>
-					<li>Carousel - <a href="lib/culture-gallery/css/carousel.css">CSS</a> | <a href="lib/culture-gallery/js/carousel_v2.0.js">JS</a></li>
-					<li>Thumbnail gallery - <a href="lib/culture-gallery/css/basic.css">CSS</a> | <a href="lib/culture-gallery/js/basic.js">JS</a></li>
-					<li>Thumbnails w/ preview - <a href="lib/culture-gallery/css/bigpreview.css">CSS</a> | <a href="lib/culture-gallery/js/bigpreview.js">JS</a></li>
-					<li>Thumbnails w/preview and caption - <a href="lib/culture-gallery/css/showcaption.css">CSS</a> | <a href="lib/culture-gallery/js/showcaption.js">JS</a></li>
+					<li><a href="//seostatic.tmp.com/css/carousel-v3.1.css">Base CSS</a></li>
+					<li><a href="//seostatic.tmp.com/js/plugins/carousel-v3.1.js">Full annotated script</a></li>
+					<li><a href="//seostatic.tmp.com/js/plugins/carousel-v3.1.min.js">Minified script</a></li>
 				</ul>
 			</li>
-			<li><h4>PlumTube</h4>
+			<li><strong>Mediaelement</strong> <span>(for video gallery and other non-YouTube video embeds)</span>
 				<ul>
-					<li><a href="lib/plumtube/plumtube.min.js">v2.0</a> (requires jQuery 1.6.0+)</li>
-					<li><a href="lib/plumtube/plumtube_v1.0.min.js">v1.0</a></li>
+					<li><a href="//seostatic.tmp.com/js/plugins/mediaelement/mediaelement.min.js">Minified script</a></li>
+					<li><a href="//seostatic.tmp.com/js/plugins/mediaelement/flashmediaelement.swf">Flash fallback resource</a> <span>(must be in same directory as script)</span></li>
 				</ul>
 			</li>
-			<li><h4>WWM CSS boilerplates</h4>
+			<li><strong>PlumTube</strong> <span>(embedded YouTube feed generator)</span>
 				<ul>
-					<li><a href="lib/wwm/microsite.css">Microsite</a></li>
-					<li><a href="lib/wwm/widget.css">Widget</a></li>
+					<li><a href="//seostatic.tmp.com/js/plugins/plumtube.min.js">v2.0</a> <span>(requires jQuery 1.6.0+)</span></li>
+					<li><a href="//seostatic.tmp.com/js/plugins/plumtube_v1.0.min.js">v1.0</a></li>
+				</ul>
+			</li>
+			<li><strong>Plumbox</strong> <span>(basic modal functionality)</span>
+				<ul>
+					<li><a href="//seostatic.tmp.com/css/plumbox.css">Base CSS</a></li>
+					<li><a href="//seostatic.tmp.com/js/plugins/plumbox.js">Full script</a> <span>(with implemenation notes)</span></li>
+					<li><a href="//seostatic.tmp.com/js/plugins/plumbox.min.js">Minified script</a></li>
+				</ul>
+			</li>
+			<li><strong>WWM CSS boilerplates</strong>
+				<ul>
+					<li><a href="//ui.tmp.com/lib/wwm/microsite.css">Microsite</a></li>
+					<li><a href="//ui.tmp.com/lib/wwm/widget.css">Widget</a></li>
 				</ul>
 			</li>
 		</ul>
-	</section>
-	<section>
-		<h3>Test</h3>
 	</section>
 {% endblock %}
