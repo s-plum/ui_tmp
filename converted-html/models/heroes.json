@@ -39,7 +39,7 @@
 		{
 			"name": "Sylvia Kates",
 			"photo": "placeholder.jpg",
-			"superpower": "",
+			"superpower": "Superpowers include Photoshopping and recognizing 'shoops by the pixels, front-end web development, drawing cartoons, dancing like a fool, playing with light in cameras, and karaoke",
 			"url": "#"
 		},
 		{
@@ -61,9 +61,9 @@
 			"url": "#"
 		},
 		{
-			"name": "Sherrie Morse",
-			"photo": "placeholder.jpg",
-			"superpower": "#",
+			"name": "Sherrie Campbell",
+			"photo": "sherrie.jpg",
+			"superpower": "Sorceress possessing an alchemy of HTML, SASSY CSS, coding and jQuery wizardry. A peripatetic wandering the world seeking truth and the human experience.",
 			"url": "#"
 		},
 		{
@@ -92,12 +92,18 @@
 		},
 		{
 			"name": "Sean Vazquez",
-			"photo": "placeholder.jpg",
+			"photo": "vazquez.jpg",
 			"superpower": "Sick-nasty beats",
 			"url": "#"
 		},
 		{
 			"name": "Lena Wan",
+			"photo": "placeholder.jpg",
+			"superpower": "",
+			"url": "#"
+		},
+		{
+			"name": "Filip Witkowski",
 			"photo": "placeholder.jpg",
 			"superpower": "",
 			"url": "#"

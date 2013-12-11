@@ -59,17 +59,24 @@ function addMenuButton() {
 	return false;
 }
 
+function setFooterPosition() {
+	if (document.getElementsByTagName('body')[0].offsetHeight < window.innerHeight) document.getElementsByTagName('footer')[0].style = 'bottom: 0; position: absolute; width: 100%;';
+	else document.getElementsByTagName('footer')[0].style = '';
+}
+
 window.onload = function() {
-	if (window.innerWidth < 800) {
-		addMenuButton();
-	}
+	setFooterPosition();
+	//if (window.innerWidth < 800) {
+		//addMenuButton();
+	//}
 };
 window.onresize = function() {
-	if (window.innerWidth < 800) {
-		addMenuButton();
-	}
-	else {
-		closeNav();
-		removeMenuButton();
-	}
+	setFooterPosition();
+	//if (window.innerWidth < 800) {
+		//addMenuButton();
+	//}
+	//else {
+		//closeNav();
+		//removeMenuButton();
+	//}
 }

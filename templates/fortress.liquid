@@ -3,8 +3,12 @@
 {% block article %}
 <section>
 	<h2>Super Friends! Respond!</h2>
-	<p>List of TMP RWD projects goes here.</p>
-	<p>Want to become a defender of truth, justice, and the responsive way? Check out:</p>
+	<ul class="link-list split">
+		{% for site in model.sites %}
+		<li><a href="{{ site.url }}">{{ site.name }} <span>{{ site.launch }}{% if site.notes %}<br/>{{ site.notes }}{% endif %}</span></a></li>
+		{% endfor %}
+	</ul>
+	<h3 class="subhead-small">Want to become a defender of truth, justice, and the responsive way? Check out:</h3>
 	<ul class="link-list">
 		<li><a href="//ui.tmp.com/projects/rwd-school-of-rock/">RWD School of Rock!</a> Notes from our 3-week-long responsive web design boot camp training sessions</li>
 		<li><a href="//ui.tmp.com/projects/respond/">Respond: Responsive Design 101</a> High-level overview of responsive design concepts and basic do's/don'ts</li>

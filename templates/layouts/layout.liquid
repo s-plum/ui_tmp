@@ -24,6 +24,16 @@
 		</aside>
 	</main>
 	{% include "navigation" %}
+	<footer>
+		<p>We're in advertising - of course we're an equal opportunity employer.</p>
+		<ul>
+			<li><a href="http://jobsattmp.com">jobs at tmp</a></li>
+			<li><a href="http://tmp.com/connect/">contact us</a></li>
+			<li><a href="http://tmp.com/privacy/">privacy</a></li>
+		</ul>
+		<p>&copy; 2013 <a href="//tmp.com">tmp.worldwide</a></p>
+	</footer>
+	{{ "global.js" | asset_url | script_tag }}
 	{% block scripts %}{% endblock %}
 </body>
 </html>

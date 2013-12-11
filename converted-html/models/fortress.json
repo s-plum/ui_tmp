@@ -1,0 +1,40 @@
+{
+	"sites": [
+		{
+			"name": "AT&amp;T Campus Recruiting",
+			"url": "http://college.att.jobs/",
+			"launch": "September 2013"
+		},
+		{
+			"name": "ServiceSource Careers",
+			"url": "http://careers.servicesource.com/",
+			"launch": "August 2013"
+		},
+		{
+			"name": "Walmart Careers",
+			"url": "http://careers.walmart.com/",
+			"launch": "June 2013",
+			"notes": "Won an award!"
+		},
+		{
+			"name": "Freeport-McMoRan Copper &amp; Gold Careers",
+			"url": "http://www.fmjobs.com/",
+			"launch": "June 2013"
+		},
+		{
+			"name": "CVS Caremark Careers",
+			"url": "http://careers.cvscaremark.com/",
+			"launch": "May 2013"
+		},
+		{
+			"name": "TD Ameritrade Careers",
+			"url": "http://careers.tdameritrade.com/",
+			"launch": "December 2012"
+		},
+		{
+			"name": "Bank of America Campus Recruitment",
+			"url": "http://campus.bankofamerica.com/",
+			"launch": "August 2012"
+		}
+	]
+}

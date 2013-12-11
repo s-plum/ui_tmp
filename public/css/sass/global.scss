@@ -49,12 +49,14 @@ to {
 }
 
 $beanie: #59c3ef;
+$beanie_dk: #0c7ba9;
 $end_mobile: 800px;
 $breakNine: 900px;
 $experimental-support-for-svg: true;
 $ltgrey: #e7e7e7;
 $mdgrey: #e1e1e1;
-$red: #dd0000;
+$red: #ee0000;
+$red_dk: #dd0000;
 $yellow: #fff800;
 
 /* =================================================================
@@ -179,6 +181,9 @@ h2 {
 
 h3 {
 	font-size: 1.4em;
+	&.subhead-small {
+		font-size: 1.167em;
+	}
 }
 h4 {
 	font-size: 1em;
@@ -194,7 +199,7 @@ a {
 	color: $red;
 	text-decoration: none;
 	&:hover, &:focus {
-		color: $beanie;
+		color: $beanie_dk;
 	}
 	&.hotline {
 		display: block;
@@ -321,6 +326,9 @@ iframe {
 		font-size: 1.2em;
 		font-weight: 700;
 		@include transition(color 100ms linear);
+		&:hover, &:focus {
+			color: $beanie;
+		}
 	}
 	img {
 		background: #fff;
@@ -532,10 +540,9 @@ header {
 nav {
 	border-bottom: 4px solid #000;
 	border-top: 4px solid #000;
-	background: $red;
+	background: $red_dk;
 	z-index: 2;
 	@include breakpoint($end_mobile) {
-		background: $red;
 		position: absolute;
 		top: 8em;
 		width: 100%;
@@ -585,7 +592,48 @@ nav {
 		}
 	}
 }
-
+footer {
+	background: #000;
+	color: #fff;
+	font-size: .83em;
+	line-height: 1.25em;
+	margin-top: 1em;
+	padding: 10px 15px;
+	text-align: center;
+	a {
+		color: #fff;
+		text-decoration: underline;
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+	p {
+		margin-bottom: .5em;
+		@include breakpoint($end_mobile) {
+			display: inline;
+		}
+	}
+	ul {
+		display: inline-block;
+		list-style: none;
+		margin-bottom: .5em;
+		@include breakpoint($end_mobile) {
+			margin: 0 10px;
+		}
+		li {
+			display: inline-block;
+			a {
+				border-left: 1px solid #fff;
+				padding: 0 5px 0 6px;
+			}
+			&:first-child a {
+				border: none;
+				padding-left: 5px;
+			}
+		}
+	}
+}
 .link-list {
 	list-style: none;
 	li {
@@ -598,6 +646,45 @@ nav {
 		display: block;
 		font-size: 1.25em;
 		font-weight: bold;
+	}
+	&.split {
+		margin-bottom: 2em;
+		&:after {
+			clear: both;
+			content: '';
+			display: block;
+		}
+		li {
+			@include breakpoint(550px) {
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				float: left;
+				width: 50%;
+				&:nth-child(odd) {
+					clear: both;
+					padding-right: .5em;
+				}
+				&:nth-child(even) {
+					padding-left: .5em;
+				}
+			}
+		}
+		a {
+			background: $beanie_dk;
+			border: 3px solid #000;
+			box-shadow: 1px 1px 3px 0 rgba(0,0,0,.4);
+			color: #fff;
+			padding: 10px;
+			&:hover, &:focus {
+				background: $red_dk;
+				box-shadow: none;
+			}
+		}
+		span {
+			display: block;
+			font-size: .92rem;
+			font-weight: normal;
+		}
 	}
 }
 
