@@ -1,8 +1,8 @@
 <nav role="navigation" id="main-nav">
 	<ul>
-		<li><a href="/">Headquarters</a></li>
-		<li><a href="/fortress">Fortress of RWD</a></li>
-		<li><a href="/codecave">The Codecave</a></li>
-		<li><a href="/heroes">Our Heroes</a></li>
+		<li><a href="/" {% if mixture.url == 'index' %}class="active"{% endif %}>Headquarters</a></li>
+		<li><a href="/fortress" {% if mixture.url == 'fortress' %}class="active"{% endif %}>Fortress of RWD</a></li>
+		<li><a href="/codecave" {% if mixture.url == 'codecave' %}class="active"{% endif %}>The Codecave</a></li>
+		<li><a href="/heroes" {% if mixture.url == 'heroes' %}class="active"{% endif %}>Our Heroes</a></li>
 	</ul>
 </nav>
