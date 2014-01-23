@@ -4,7 +4,7 @@
 
 {% block article %}
 	<section>
-		<h2>Introducing: The UI Super Friends</h2>
+		<h2>Super Friends, Assemble!</h2>
 		<ul class="panel">
 			{% for hero in model.heroes %}
 			<li><a href="{{ hero.url }}"><img src="public/img/devs/{{hero.photo}}" alt="{{ hero.name }}" width="200" height="200"/><span>{{ hero.name }}</span></a><p>{{ hero.superpower }}</p></li>

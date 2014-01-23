@@ -160,6 +160,11 @@ section {
 			margin: 0 auto 1em;
 			max-width: 400px;
 		}
+		&#rwd-emblem {
+			border: 0;
+			margin: 0 auto 1em;
+			max-width: 370px;
+		}
 	}
 }
 
@@ -249,6 +254,8 @@ iframe {
 }
 
 .panel {
+	/*display: -webkit-flex;
+	flex-flow: row wrap;*/
 	list-style: none;
 	overflow: hidden;
 	li {
@@ -269,15 +276,15 @@ iframe {
 		@include breakpoint(600px) {
 			margin-right: 2%;
 			width: 32%;
-			&:nth-child(3n+4) {
-				clear: both;
-			}
 			&:nth-child(odd) {
 				clear: none;
 				margin-right: 2%;
 			}
 			&:nth-child(3n+3) {
 				margin-right: 0;
+			}
+			&:nth-child(3n+4) {
+				clear: both;
 			}
 		}
 		@include breakpoint($end_mobile) {
@@ -291,7 +298,7 @@ iframe {
 				clear: none;
 			}
 		}
-		@include breakpoint(775px) {
+		@include breakpoint(1000px) {
 			margin-right: 2%;
 			width: 32%;
 			&:nth-child(3n+3) {
@@ -301,22 +308,6 @@ iframe {
 				clear: none;
 			}
 			&:nth-child(3n+4) {
-				clear: both;
-			}
-		}
-		@include breakpoint(1050px) {
-			margin-right: 1.5%;
-			width: 23.875%;
-			&:nth-child(3n+3), &:nth-child(odd) {
-				margin-right: 1.5%;
-			}
-			&:nth-child(4n+4) {
-				margin-right: 0;
-			}
-			&:nth-child(3n+4) {
-				clear: none;
-			}
-			&:nth-child(4n+5) {
 				clear: both;
 			}
 		}

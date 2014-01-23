@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
 	"heroes": [
 		{
@@ -33,8 +32,8 @@
 		},
 		{
 			"name": "Max Hartz",
-			"photo": "placeholder.jpg",
-			"superpower": "",
+			"photo": "max.jpg",
+			"superpower": "Invisibility",
 			"url": "#"
 		},
 		{
@@ -57,7 +56,7 @@
 		},
 		{
 			"name": "Dave Mechlin",
-			"photo": "placeholder.jpg",
+			"photo": "dave.jpg",
 			"superpower": "",
 			"url": "#"
 		},
@@ -81,13 +80,13 @@
 		},
 		{
 			"name": "Ted Stetzel",
-			"photo": "placeholder.jpg",
+			"photo": "ted.jpg",
 			"superpower": "Encyclopedic knowledge of memes",
 			"url": "#"
 		},
 		{
 			"name": "Adam Taylor",
-			"photo": "placeholder.jpg",
+			"photo": "adam.jpg",
 			"superpower": "",
 			"url": "#"
 		},
@@ -111,5 +110,3 @@
 		}
 	]
 }
-=======
->>>>>>> 19af9e52e5b947f26d1ab8bb80b60b8d6347a0bd

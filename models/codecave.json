@@ -30,5 +30,57 @@
 			"description": "Sample animation using GreenSock",
 			"url": "/public/docs/ATT_Example/demo2.html"
 		}
+	],
+	"utilities": [
+		{
+			"name": "SASS",
+			"url": "http://sass-lang.com/",
+			"description": "A magical CSS extension language"
+		},
+		{
+			"name": "Compass",
+			"url": "http://compass-style.org/",
+			"description": "SASS on steroids of awesomeness"
+		},
+		{
+			"name": "Let's Get Sassy",
+			"url": "http://stephanieplumeri.net/plumlabs/sassy/",
+			"description": "Install walkthrough for SASS/Compass"
+		},
+		{
+			"name": "modern.IE",
+			"url": "http://www.modern.ie/",
+			"description": "Legacy Internet Explorer testing tools"
+		},
+		{
+			"name": "LiveReload",
+			"url": "http://livereload.com/",
+			"description": "See code changes in your browser without exhausing the refresh button"
+		},
+		{
+			"name": "Embed Responsively",
+			"url": "http://embedresponsively.com/",
+			"description": "Generate RWD-friendly media embed codes"
+		},
+		{
+			"name": "Chart.js",
+			"url": "http://www.chartjs.org/",
+			"description": "Client-side graphs"
+		},
+		{
+			"name": "JSBeautifier",
+			"url": "http://jsbeautifier.org/",
+			"description": "Unpack or deobfuscate JavaScript and HTML, make JSON/JSONP readable"
+		},
+		{
+			"name": "CSSTRASHMAN",
+			"url": "http://www.csstrashman.com/",
+			"description": "Clean the garbage out of your CSS"
+		},
+		{
+			"name": "Compress PDF",
+			"url": "http://compress.smallpdf.com/",
+			"description": "Shrink PDF documents to web-friendly sizes"
+		}
 	]
 }

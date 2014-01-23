@@ -13,42 +13,14 @@
 
 {% block aside %}
 	<section>
-		<h3>Code Library</h3>
-		<p>Download resource files, or link to them directly:</p>
+		<h3>Utility Belt</h3>
 		<ul class="bulleted code">
-			<li><a href="//seostatic.tmp.com/js/plugins/jquery.flexslider-min.js"><strong>Flexslider</strong> <span>(with IE10 bug fix)</span></a></li>
-			<li><strong>Image/video carousel gallery</strong>
-				<ul>
-					<li><a href="//seostatic.tmp.com/css/carousel-v3.1.css">Base CSS</a></li>
-					<li><a href="//seostatic.tmp.com/js/plugins/carousel-v3.1.js">Full annotated script</a></li>
-					<li><a href="//seostatic.tmp.com/js/plugins/carousel-v3.1.min.js">Minified script</a></li>
-				</ul>
+			{% for item in model.utilities %}
+			<li>
+				<a href="{{ item.url }}"><strong>{{ item.name }}</strong></a> 
+				<p>{{ item.description }}</p>
 			</li>
-			<li><strong>Mediaelement</strong> <span>(for video gallery and other non-YouTube video embeds)</span>
-				<ul>
-					<li><a href="//seostatic.tmp.com/js/plugins/mediaelement/mediaelement.min.js">Minified script</a></li>
-					<li><a href="//seostatic.tmp.com/js/plugins/mediaelement/flashmediaelement.swf">Flash fallback resource</a> <span>(must be in same directory as script)</span></li>
-				</ul>
-			</li>
-			<li><strong>PlumTube</strong> <span>(embedded YouTube feed generator)</span>
-				<ul>
-					<li><a href="//seostatic.tmp.com/js/plugins/plumtube.min.js">v2.0</a> <span>(requires jQuery 1.6.0+)</span></li>
-					<li><a href="//seostatic.tmp.com/js/plugins/plumtube_v1.0.min.js">v1.0</a></li>
-				</ul>
-			</li>
-			<li><strong>Plumbox</strong> <span>(basic modal functionality)</span>
-				<ul>
-					<li><a href="//seostatic.tmp.com/css/plumbox.css">Base CSS</a></li>
-					<li><a href="//seostatic.tmp.com/js/plugins/plumbox.js">Full script</a> <span>(with implemenation notes)</span></li>
-					<li><a href="//seostatic.tmp.com/js/plugins/plumbox.min.js">Minified script</a></li>
-				</ul>
-			</li>
-			<li><strong>WWM CSS boilerplates</strong>
-				<ul>
-					<li><a href="//ui.tmp.com/lib/wwm/microsite.css">Microsite</a></li>
-					<li><a href="//ui.tmp.com/lib/wwm/widget.css">Widget</a></li>
-				</ul>
-			</li>
+			{% endfor %}
 		</ul>
 	</section>
 {% endblock %}

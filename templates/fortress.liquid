@@ -2,24 +2,25 @@
 
 {% block article %}
 <section>
-	<h2>Super Friends! Respond!</h2>
-	<ul class="link-list split">
+	<h2>Truth, Justice, and The Responsive Way</h2>
+	<ul class="panel">
 		{% for site in model.sites %}
-		<li><a href="{{ site.url }}">{{ site.name }} <span>{{ site.launch }}{% if site.notes %}<br/>{{ site.notes }}{% endif %}</span></a></li>
+		<li><a href="{{ site.url }}"><img src="/public/img/sites/{{ site.image }}" alt="{{ site.name }}"/><span>{{ site.name }}</span></a><p>{{ site.launch }}{% if site.notes %}<br/>{{ site.notes }}{% endif %}</p></li>
 		{% endfor %}
-	</ul>
-	<h3 class="subhead-small">Want to become a defender of truth, justice, and the responsive way? Check out:</h3>
-	<ul class="link-list">
-		<li><a href="//ui.tmp.com/projects/rwd-school-of-rock/">RWD School of Rock!</a> Notes from our 3-week-long responsive web design boot camp training sessions</li>
-		<li><a href="//ui.tmp.com/projects/respond/">Respond: Responsive Design 101</a> High-level overview of responsive design concepts and basic do's/don'ts</li>
 	</ul>
 </section>
 {% endblock %}
 	
 {% block aside %}
 <section>
-	<h3>A League of Extraordinary Developers</h3>
-	<p>Our responsive brethen in the fight against bad code:</p>
+	<h3>Superhero School</h3>
+	<a href="http://ui.tmp.com/projects/rwd-school-of-rock/"><img id="rwd-emblem" src="/public/img/rwd-school-of-rock.png" alt="RWD School of Rock!"/></a>
+	<p>TMP Worldwide's preeminent academy for all things responsive design.</p>
+</section>
+<section>
+	<h3>Sharpen Your Responsive-Fu</h3>
+	<p>The student may become the master, but the true master is forever a student. Learn from some of the true masters:</p>
+	
 	<ul class="bulleted code">
 		<li><a href="http://bradfrostweb.com/"><b>Brad Frost</b></a> has a <a href="http://bradfrost.github.io/this-is-responsive/resources">massive collection of resources</a> for designers and developers alike.</li>
 		<li><a href="http://ethanmarcotte.com/"><b>Ethan Marcotte</b></a> wrote the book on RWD. <a href="http://www.abookapart.com/products/responsive-web-design">Literally</a>.</li>
@@ -29,9 +30,4 @@
 		<li>The many authors of <a href="http://alistapart.com"><b>A List Apart</b></a> have compiled a sizable <a href="http://alistapart.com/topic/responsive-design">RWD archive</a>.</li>
 	</ul>
 </section>
-{% endblock %}
-
-{% block scripts %}
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-{{ "fortress.js" | asset_url | script_tag }}
 {% endblock %}

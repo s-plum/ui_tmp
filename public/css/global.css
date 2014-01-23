@@ -224,6 +224,11 @@ section img.bunnycake {
   margin: 0 auto 1em;
   max-width: 400px;
 }
+section img#rwd-emblem {
+  border: 0;
+  margin: 0 auto 1em;
+  max-width: 370px;
+}
 
 article h2, aside h3 {
   background: #000;
@@ -315,6 +320,8 @@ iframe {
 }
 
 .panel {
+  /*display: -webkit-flex;
+  flex-flow: row wrap;*/
   list-style: none;
   overflow: hidden;
 }
@@ -342,15 +349,15 @@ iframe {
     margin-right: 2%;
     width: 32%;
   }
-  .panel li:nth-child(3n+4) {
-    clear: both;
-  }
   .panel li:nth-child(odd) {
     clear: none;
     margin-right: 2%;
   }
   .panel li:nth-child(3n+3) {
     margin-right: 0;
+  }
+  .panel li:nth-child(3n+4) {
+    clear: both;
   }
 }
 @media (min-width: 800px) {
@@ -366,7 +373,7 @@ iframe {
     clear: none;
   }
 }
-@media (min-width: 775px) {
+@media (min-width: 1000px) {
   .panel li {
     margin-right: 2%;
     width: 32%;
@@ -378,24 +385,6 @@ iframe {
     clear: none;
   }
   .panel li:nth-child(3n+4) {
-    clear: both;
-  }
-}
-@media (min-width: 1050px) {
-  .panel li {
-    margin-right: 1.5%;
-    width: 23.875%;
-  }
-  .panel li:nth-child(3n+3), .panel li:nth-child(odd) {
-    margin-right: 1.5%;
-  }
-  .panel li:nth-child(4n+4) {
-    margin-right: 0;
-  }
-  .panel li:nth-child(3n+4) {
-    clear: none;
-  }
-  .panel li:nth-child(4n+5) {
     clear: both;
   }
 }
